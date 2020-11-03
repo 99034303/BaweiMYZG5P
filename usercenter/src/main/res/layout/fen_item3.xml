@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:padding="5dp">
+
+    <ImageView
+        android:src="@drawable/meinv"
+        android:id="@+id/iv_fenimage"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+    </ImageView>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_fentext3"
+        android:text="这是商品名"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+</LinearLayout>

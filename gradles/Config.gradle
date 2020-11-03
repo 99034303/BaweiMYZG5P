@@ -1,0 +1,41 @@
+def version=rootProject.ext.dependenciesVersion
+ext{
+    android=[
+
+    ]
+
+    dependencies=[
+            corektx:"androidx.core:core-ktx:${version.corektx}",
+            appcompat: "androidx.appcompat:appcompat:${version.appcompat}",
+            constraintlayout: "androidx.constraintlayout:constraintlayout:${version.constraintlayout}",
+
+            retrofit:"com.squareup.retrofit2:retrofit:$version.retrofit",
+            retrofitgson:"com.squareup.retrofit2:converter-gson:$version.retrofitgson",
+            retrofitrxjava:"com.squareup.retrofit2:adapter-rxjava2:$version.retrofitrxjava",
+            okhttplog:"com.squareup.okhttp3:logging-interceptor:$version.okhttplog",
+            gson:"com.google.code.gson:gson:$version.gson",
+            rxandroid:"io.reactivex.rxjava2:rxandroid:$version.rxandroid",
+            rxjava:"io.reactivex.rxjava2:rxjava:$version.rxjava",
+
+            retrofitcoroutines:"com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$version.retrofitcoroutines",
+
+            autodisposearchcomponents:"com.uber.autodispose:autodispose-android-archcomponents:$version.autodisposearchcomponents",
+            autodispose:"com.uber.autodispose:autodispose-android:$version.autodispose",
+            glide:"com.github.bumptech.glide:glide:$version.glide",
+            disklru:"com.jakewharton:disklrucache:$version.disklru",
+
+            fastjsonAndroid: "com.alibaba:fastjson:$version.fastjsonAndroid",
+            fastjson:"com.alibaba:fastjson:$version.fastjson",
+
+            greenDao:"org.greenrobot:greendao:$version.greenDao"
+    ]
+
+    urls=[
+            offline:"http://api.city2sky.cn/",
+            online:"http://api.city2sky.cn/"
+    ]
+
+    verifyCode=[
+            serverCode:"7a17b17e13914413e1f51fd1051501de1a919519b1221fd1"
+    ]
+}

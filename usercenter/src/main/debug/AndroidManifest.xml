@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.usercenter">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <application
+        android:name=".main_and_cotegory.fragment.app.UserCenterApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".zhifubao.PayDemoActivity"/>
+        <activity android:name=".address.SelectActivity"></activity>
+        <activity android:name=".address.NewAddressActivity" />
+        <activity android:name=".address.AddressActivity" />
+        <activity android:name=".xiangqing.view.BigImageActivity" />
+        <activity android:name=".xiangqing.mvp.view.PageActivity" />
+        <activity android:name=".main_and_cotegory.fragment.sousuoview.GoodsActivity" />
+        <activity android:name=".main_and_cotegory.fragment.sousuoview.SousuoActivity" />
+        <activity android:name=".main_and_cotegory.fragment.mvp.view.RegisterActivity" />
+        <activity android:name=".main_and_cotegory.fragment.mvp.view.LoginActivity" />
+        <activity android:name=".main_and_cotegory.fragment.mvp.view.UserCenterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

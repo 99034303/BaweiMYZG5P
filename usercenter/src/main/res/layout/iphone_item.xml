@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:padding="20dp">
+    <ImageView
+        android:src="@drawable/iphone12promaxbluehero"
+        android:id="@+id/iv_phone1"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+    </ImageView>
+    <LinearLayout
+        android:layout_weight="1.5"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_phone_name"
+            android:text="Apple 苹果 iPhone 12 Pro 128/256/512GB移动联通电信5G  双卡手机 海洋蓝 128GB"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </TextView>
+        <LinearLayout
+            android:layout_weight="0.3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:id="@+id/tv_phone_price"
+                android:text="9499.00"
+                android:textSize="20dp"
+                android:textColor="#E31414"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </TextView>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_phone_dianpu"
+            android:text="Apple 官方旗舰店"
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+        </TextView>
+
+    </LinearLayout>
+</LinearLayout>

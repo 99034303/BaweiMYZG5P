@@ -1,0 +1,5 @@
+include ':Storage'
+include ':usercenter'
+include ':core'
+include ':app'
+rootProject.name = "BaweiMYZG5P"

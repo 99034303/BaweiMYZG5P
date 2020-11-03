@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".main_and_cotegory.fragment.CategoryFragment">
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:id="@+id/ll_sousuoc1"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/saoma"
+            android:id="@+id/iv_saoma"
+            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:layout_height="20dp">
+        </ImageView>
+        <LinearLayout
+            android:id="@+id/refresh_serch"
+            android:layout_width="300dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/refresh_serch_back"
+            android:padding="5dp">
+            <ImageView
+                android:id="@+id/iv_fensuosuo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_sousuo" />
+            <EditText
+                android:id="@+id/et_fenglei"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="iPhone 12" />
+
+            <ImageView
+                android:id="@+id/iv_fenleipaizhao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_camera" />
+
+        </LinearLayout>
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/xinxi"
+            android:id="@+id/iv_fenleixinxi"
+            android:layout_weight="1"
+            android:layout_width="40dp"
+            android:layout_height="20dp">
+        </ImageView>
+    </LinearLayout>
+    <LinearLayout
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/rv_fen1"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/diannao"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+            </ImageView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/rv_fen2"
+                android:layout_height="match_parent">
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+if (isNeedUserCenterMoudle.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+def urls=rootProject.ext.urls
+def verifycode=rootProject.ext.verifyCode
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        if(isNeedUserCenterMoudle.toBoolean()) {
+            applicationId "com.example.usercenter"
+        }
+
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug{
+            buildConfigField("String","BASEURL","\""+urls.offline+"\"")
+            buildConfigField("String","VERIFYCODE","\""+verifycode.serverCode+"\"")
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String","BASEURL","\""+urls.online+"\"")
+            buildConfigField("String","VERIFYCODE","\""+verifycode.serverCode+"\"")
+        }
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//        }
+    }
+    sourceSets {
+        main {
+            if (isNeedUserCenterMoudle.toBoolean()) {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation project(path: ':core')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation files('libs\\alipaySdk-15.7.9-20200727142846.aar')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.youth.banner:banner:1.4.10'        //轮播图
+    api 'com.github.1002326270xc:LayoutManager-FlowLayout:v1.7'//流式布局
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'   //上拉下拉
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.2@aar'            //flycotablayout    common
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+}
